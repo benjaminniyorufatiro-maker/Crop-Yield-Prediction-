@@ -45,4 +45,5 @@ input_data = pd.DataFrame([encoded_data])
 # --- Prediction ---
 if st.button("🔍 Predict Crop Yield"):
     prediction = model.predict(input_data)
-    st.success(f"🌾 predicted Yield in tons per hectare is: **{prediction[0]:.2f} **")
+    st.success(f"🌾 predicted Yield in tons per hectare is: {prediction[0]:.2f} ")
+
