@@ -6,12 +6,13 @@ import pickle
 model = pickle.load(open('25RP18751.sav', 'rb'))
 
 st.title("🌾 Crop Yield Prediction App")
+st.write("Designed by **NIYORUFATIRO Benjamin**")
 st.write("Enter your crop and environmental details below:")
 
 # Dropdowns (automatic selection)
 Region = st.selectbox("Select Region", ["North", "South", "East", "West"])
-Soil_Type = st.selectbox("Select Soil Type", ["Sandy", "Clay", "Loam"])
-Crop = st.selectbox("Select Crop", ["Rice", "Cotton", "Barley", "Soybean"])
+Soil_Type = st.selectbox("Select Soil Type", ["Sandy", "Clay", "Loam", "Silt", "Peaty", "Chalky"])
+Crop = st.selectbox("Select Crop", ["Cotton", "Rice", "Barley", "Soybean", "Wheat", "Maize"])
 Rainfall_mm = st.number_input("Rainfall (mm)", min_value=0.0, step=0.1)
 Temperature_Celsius = st.number_input("Temperature (°C)", min_value=-10.0, step=0.1)
 Fertilizer_Used = st.selectbox("Fertilizer Used", ["TRUE", "FALSE"])
